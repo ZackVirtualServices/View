@@ -64,5 +64,77 @@
       width: 100%;
       padding: 0.8rem;
       margin: 0.5rem 0;
-      border: 1
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Virtual Services Hub</h1>
+  <p>Your One-Stop Solution for Professional Virtual Assistance</p>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Virtual Assistant</h3>
+        <p>Efficient administrative support, calendar management, data entry, and more.</p>
+      </div>
+      <div class="card">
+        <h3>Customer Support</h3>
+        <p>24/7 customer service support via chat, email, or phone tailored to your business needs.</p>
+      </div>
+      <div class="card">
+        <h3>Social Media Management</h3>
+        <p>Grow your online presence with engaging content and active community management.</p>
+      </div>
+      <div class="card">
+        <h3>Content Writing</h3>
+        <p>High-quality blog posts, articles, product descriptions, and more from skilled writers.</p>
+      </div>
+      <div class="card">
+        <h3>Technical Support</h3>
+        <p>Remote IT support, troubleshooting, and software assistance for businesses of all sizes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-form">
+    <h2>Contact Us</h2>
+    <form action="#" method="POST">
+      <input type="text" name="name" placeholder="Your Full Name" required />
+      <input type="email" name="email" placeholder="Your Email Address" required />
+      <textarea name="message" rows="5" placeholder="How can we help you?" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</div>
+
+<footer>
+  <p>&copy; 2025 Virtual Services Hub. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
 
