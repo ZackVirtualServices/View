@@ -1,264 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Virtual Services Hub</title>
+  <meta charset="UTF-8">
+  <title>SadaPay Transaction</title>
   <style>
     body {
+      background-color: #f1f9f7;
       font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f4f4;
-      color: #333;
-    }
-
-    .drawer {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 9999;
-      top: 0;
-      left: 0;
-      background-color: #333;
-      overflow-x: hidden;
-      transition: 0.3s;
-      padding-top: 60px;
-    }
-
-    .drawer a {
-      padding: 12px 24px;
-      text-decoration: none;
-      font-size: 18px;
-      color: white;
-      display: block;
-      transition: 0.3s;
-    }
-
-    .drawer a:hover {
-      background-color: #575757;
-    }
-
-    .drawer-close {
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      font-size: 36px;
-      color: white;
-      text-decoration: none;
-    }
-
-    nav {
-      background: #333;
-      color: white;
-      padding: 0.5rem 1rem;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
+      padding: 20px;
     }
-
-    nav span {
-      font-size: 1.2rem;
-    }
-
-    nav button {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-
-    header {
-      background: #4CAF50;
-      color: white;
-      padding: 1rem 2rem;
-      text-align: center;
-    }
-
     .container {
-      padding: 2rem;
+      background-color: white;
+      border-radius: 20px;
+      padding: 30px;
+      width: 300px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
     }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+    .logo {
+      font-weight: bold;
+      font-size: 24px;
+      color: #2d5f73;
+      margin-bottom: 20px;
     }
-
-    .card {
-      background: white;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    .checkmark {
+      width: 50px;
+      height: 50px;
+      background-color: #ff7052;
+      border-radius: 50%;
+      display: inline-block;
+      color: white;
+      font-size: 30px;
+      line-height: 50px;
+      margin-bottom: 20px;
     }
-
-    .card h3 {
-      margin-top: 0;
-      color: #4CAF50;
+    .amount {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
-
-    .contact-form {
-      margin-top: 2rem;
-      background: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    .name {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 20px;
     }
-
-    input, textarea {
-      width: 100%;
-      padding: 0.8rem;
-      margin: 0.5rem 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+    .info {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 5px;
     }
-
-    button {
-      background: #4CAF50;
+    .reference {
+      margin-top: 10px;
+    }
+    .close-btn {
+      background-color: #ff7052;
       color: white;
       border: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 5px;
+      border-radius: 10px;
+      padding: 10px 30px;
+      font-size: 16px;
       cursor: pointer;
-    }
-
-    button:hover {
-      background: #45a049;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #333;
-      color: white;
-      margin-top: 2rem;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
 
-<!-- Drawer -->
-<div id="drawer" class="drawer">
-  <a href="#" class="drawer-close" id="drawerClose">&times;</a>
-  <a href="#">Home</a>
-  <a href="#address">Office Address</a>
-  <a href="#about">About Us</a>
-</div>
+  <div class="logo">SADAPAY</div>
 
-<!-- Navigation bar -->
-<nav>
-  <imgy src="logo.png" alt="Company Logo" width="150">
-  <button id="menuToggle">☰</button>
-</nav>
+  <div class="container">
+    <div class="checkmark">✓</div>
+    <div class="amount">Rs. 3,200</div>
+    <div class="name">Ali Abbas to<br>JAMAL ASGHAR</div>
 
-<!-- Header below navigation -->
-<header>
-  <h1>Virtual Services Hub</h1>
-  <p>Your One-Stop Solution for Professional Virtual Assistance</p>
-</header>
+    <div class="info">Date & Time (PKT)</div>
+    <div class="info">21 November 2023, 07:53 PM</div>
 
-<div class="container">
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="card">
-        <h3>Virtual Assistant</h3>
-        <p>Efficient administrative support, calendar management, data entry, and more.</p>
-      </div>
-      <div class="card">
-        <h3>Customer Support</h3>
-        <p>24/7 customer service support via chat, email, or phone tailored to your business needs.</p>
-      </div>
-      <div class="card">
-        <h3>Social Media Management</h3>
-        <p>Grow your online presence with engaging content and active community management.</p>
-      </div>
-      <div class="card">
-        <h3>Content Writing</h3>
-        <p>High-quality blog posts, articles, product descriptions, and more from skilled writers.</p>
-      </div>
-      <div class="card">
-        <h3>Technical Support</h3>
-        <p>Remote IT support, troubleshooting, and software assistance for businesses of all sizes.</p>
-      </div>
-    </div>
-  </section>
+    <div class="info" style="margin-top: 15px;">Receiver's Account</div>
+    <div class="info">Bank Alfalah *4488</div>
 
-  <section id="address" style="margin-top: 3rem;">
-    <h2>Office Address</h2>
-    <p>Virtual Services Hub</p>
-    <p>6325 Miller Grove Rd Mississauga Ontario,L5N3K2</p>
-    <email>zackVirtualServices@outlook.com</email>
-    <p>+1 289-855-9508</p>
-  </section>
+    <div class="info reference">Reference Number</div>
+    <div class="info">820838</div>
+  </div>
 
-  <section id="about" style="margin-top: 3rem;">
-    <h2>About Us</h2>
-    <p>We are a global team providing top-notch virtual services to clients across industries.</p>
-  </section>
-
-  <section id="contact" class="contact-form">
-    <h2>Contact Us</h2>
-    <form action="#" method="POST">
-      <input type="text" name="name" placeholder="Your Full Name" required />
-      <input type="email" name="email" placeholder="Your Email Address" required />
-      <textarea name="message" rows="5" placeholder="How can we help you?" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-</div>
-
-<footer>
-  <p>&copy; 2025 Virtual Services Hub. All rights reserved.</p>
-</footer>
-
-<script>
-  // Smooth scrolling
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        document.getElementById("drawer").style.width = "0";
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-
-  // Contact form validation
-  const form = document.querySelector("form");
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const message = form.message.value.trim();
-
-    if (!name || !email || !message) {
-      alert("Please fill in all fields.");
-      return;
-    }
-
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
-
-    alert("Thank you for contacting us, " + name + "! We will get back to you soon.");
-    form.reset();
-  });
-
-  // Drawer toggle
-  document.getElementById("menuToggle").onclick = () => {
-    document.getElementById("drawer").style.width = "250px";
-  };
-
-  document.getElementById("drawerClose").onclick = () => {
-    document.getElementById("drawer").style.width = "0";
-  };
-</script>
+  <button class="close-btn">Close</button>
 
 </body>
 </html>
+
+
 
