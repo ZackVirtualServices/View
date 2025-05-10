@@ -2,93 +2,233 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SadaPay Transaction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zack Williams | Virtual Assistant</title>
   <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
-      background-color: #f1f9f7;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
+      font-family: 'Arial', sans-serif;
+      background: #f0f0f0;
+      color: #333;
+      line-height: 1.6;
     }
-    .container {
-      background-color: white;
-      border-radius: 20px;
-      padding: 30px;
-      width: 300px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header Section */
+    header {
+      background: #2e3b4e;
+      color: #fff;
+      padding: 50px 0;
       text-align: center;
-      position: relative;
     }
-    .logo {
-      font-weight: bold;
-      font-size: 24px;
-      color: #2d5f73;
-      margin-bottom: 20px;
-    }
-    .checkmark {
-      width: 50px;
-      height: 50px;
-      background-color: #ff7052;
-      border-radius: 50%;
-      display: inline-block;
-      color: white;
-      font-size:30px;
-      line-height: 50px;
-      margin-bottom: 20px;
-    }
-    .amount {
-      font-size: 28px;
-      font-weight: bold;
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 1px;
       margin-bottom: 10px;
     }
-    .name {
-      font-size: 16px;
-      font-weight: 600;
+    header p {
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+
+    /* Main Content */
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px;
+    }
+    
+    /* About Me Section */
+    .about {
+      background: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      transition: all 0.3s ease;
+    }
+    .about:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .about h2 {
+      font-size: 2rem;
+      color: #2e3b4e;
       margin-bottom: 20px;
     }
-    .info {
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 5px;
+    .about p {
+      font-size: 1.1rem;
+      color: #666;
     }
-    .reference {
-      margin-top: 10px;
+
+    /* Skills Section */
+    .skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
     }
-    .close-btn {
-      background-color: #ff7052;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      padding: 10px 30px;
-      font-size: 16px;
-      cursor: pointer;
+    .skills li {
+      background: #2e3b4e;
+      color: #fff;
+      padding: 15px 25px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: transform 0.3s ease;
+    }
+    .skills li:hover {
+      transform: scale(1.1);
+      background: #1f2a38;
+    }
+
+    /* Projects Section */
+    .projects ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .projects li {
+      background: #fff;
+      margin: 15px 0;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    .projects li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    .projects h3 {
+      color: #2e3b4e;
+      font-size: 1.5rem;
+    }
+    .projects p {
+      color: #666;
+      font-size: 1rem;
+    }
+
+    /* Experience Section */
+    .experience p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* Education Section */
+    .education p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* Contact Section */
+    .contact a {
+      color: #2e3b4e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .contact a:hover {
+      color: #1f2a38;
+    }
+
+    /* Footer */
+    footer {
+      background: #2e3b4e;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
       margin-top: 30px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      section {
+        padding: 15px;
+      }
+      .skills li {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="logo">
-  <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fbrandfetch.com%2Fsadapay.pk&psig=AOvVaw1l0XoBn7jNPF6qtrPbvKin&ust=1746576498927000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKjUotDGjY0DFQAAAAAdAAAAABAE" style="width: 150px;">
-  Sadapay</div>
-  <div class="container">
-    <div class="checkmark">✓</div>
-    <div class="amount">Rs. 35,000</div>
-    <div class="name">Sharoon Javaid to<br>Ali Abbas</div>
+<header>
+  <h1>Zack Williams</h1>
+  <p>Professional Virtual Assistant</p>
+</header>
 
-    <div class="info">Date & Time (PKT)</div>
-    <div class="info">3 May 2025, 05:00 Am</div>
+<section class="about">
+  <h2>About Me</h2>
+  <p>I’m a highly organized and tech-savvy Virtual Assistant with over 4 years of experience helping entrepreneurs and businesses manage their schedules, communication, and customer support. I specialize in administrative support, email management, and CRM tools.</p>
+</section>
 
-    <div class="info" style="margin-top: 15px;">Receiver's Account</div>
-    <div class="info">Sadapay *2335</div>
+<section class="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>Email & Calendar Management</li>
+    <li>CRM Tools (HubSpot, Zoho)</li>
+    <li>Data Entry & Internet Research</li>
+    <li>Customer Support (Chat, Email, Phone)</li>
+    <li>Social Media Scheduling</li>
+    <li>Google Workspace & Microsoft Office</li>
+  </ul>
+</section>
 
-    <div class="info reference">Reference Number</div>
-    <div class="info">820838</div>
-  </div>
+<section class="projects">
+  <h2>Featured Projects</h2>
+  <ul>
+    <li>
+      <h3>Client Support Automation</h3>
+      <p>Helped reduce response time by 40% using canned responses and scheduling tools.</p>
+    </li>
+    <li>
+      <h3>Inbox Cleanup</h3>
+      <p>Organized over 10,000 emails for a CEO, implementing filters and folder organization for better productivity.</p>
+    </li>
+  </ul>
+</section>
 
-  <button class="close-btn">Close</button>
+<section class="experience">
+  <h2>Work Experience</h2>
+  <p><strong>Freelance Virtual Assistant</strong> – 2020–Present<br>
+  Supporting multiple international clients with administrative, scheduling, and support tasks remotely.</p>
+  <p><strong>DIRECTV Customer Service Representative</strong> – 2021–2022<br>
+  - Assisted customers with billing inquiries, service issues, and account management.<br>
+  - Provided information on DIRECTV products and services, offering tailored solutions to meet customer needs.<br>
+  - Utilized various tools and systems to resolve customer concerns and ensure satisfaction.</p>
+  <p><strong>Walmart Sales Representative</strong> – 2022–2024<br>
+  - Promoted and sold DIRECTV services within Walmart retail locations.<br>
+  - Assisted customers in selecting suitable TV packages and internet bundles.<br>
+  - Provided information on promotional offers and discounts.<br>
+  - Handled customer inquiries and resolved issues related to services.</p>
+</section>
+
+<section class="education">
+  <h2>Education</h2>
+  <p><strong>BS. in Computer Science</strong><br>
+  University of Central Punjab, 2024</p>
+</section>
+
+<section class="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:ZackVirtualServices@outlook.com">ZackVirtualServices@outlook.com</a><br>
+  LinkedIn: <a href="https://linkedin.com/in/ZackVirtualServices" target="_blank">linkedin.com/in/ZackVirtualServices</a><br>
+  Location: Remote</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Zack Williams | Virtual Assistant Portfolio</p>
+</footer>
 
 </body>
 </html>
