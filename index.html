@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Zack Williams | Virtual Assistant</title>
   <style>
     /* Global Styles */
@@ -21,8 +21,6 @@
       text-decoration: none;
       color: inherit;
     }
-
-    /* Header Section */
     header {
       background: #2e3b4e;
       color: #fff;
@@ -38,16 +36,28 @@
       font-size: 1.2rem;
       color: #ddd;
     }
-
-    /* Main Content */
     section {
       max-width: 1100px;
       margin: 0 auto;
       padding: 30px;
     }
-    
-    /* About Me Section */
-    .about {
+    .summary {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .summary h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #2e3b4e;
+    }
+    .summary p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+    .skills, .projects, .experience, .education, .contact, .testimonials {
       background: #fff;
       border-radius: 10px;
       padding: 30px;
@@ -55,25 +65,21 @@
       margin-bottom: 30px;
       transition: all 0.3s ease;
     }
-    .about:hover {
+    .projects li:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
-    .about h2 {
+    h2 {
       font-size: 2rem;
       color: #2e3b4e;
       margin-bottom: 20px;
     }
-    .about p {
-      font-size: 1.1rem;
-      color: #666;
-    }
-
-    /* Skills Section */
     .skills ul {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
+      list-style: none;
+      padding: 0;
     }
     .skills li {
       background: #2e3b4e;
@@ -88,10 +94,8 @@
       transform: scale(1.1);
       background: #1f2a38;
     }
-
-    /* Projects Section */
     .projects ul {
-      list-style-type: none;
+      list-style: none;
       padding: 0;
     }
     .projects li {
@@ -102,10 +106,6 @@
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
     }
-    .projects li:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
     .projects h3 {
       color: #2e3b4e;
       font-size: 1.5rem;
@@ -114,30 +114,40 @@
       color: #666;
       font-size: 1rem;
     }
-
-    /* Experience Section */
-    .experience p {
-      font-size: 1.1rem;
-      color: #444;
-    }
-
-    /* Education Section */
-    .education p {
-      font-size: 1.1rem;
-      color: #444;
-    }
-
-    /* Contact Section */
     .contact a {
       color: #2e3b4e;
-      text-decoration: none;
       font-weight: bold;
     }
     .contact a:hover {
       color: #1f2a38;
     }
-
-    /* Footer */
+    .testimonials ul {
+      list-style: none;
+      padding: 0;
+    }
+    .testimonials li {
+      display: flex;
+      align-items: flex-start;
+      background: #f9f9f9;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      gap: 15px;
+    }
+    .testimonials img {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+    }
+    .testimonials em {
+      display: block;
+      color: #555;
+    }
+    .testimonials strong {
+      color: #2e3b4e;
+      font-size: 0.95rem;
+    }
     footer {
       background: #2e3b4e;
       color: #fff;
@@ -145,8 +155,6 @@
       text-align: center;
       margin-top: 30px;
     }
-
-    /* Responsive Design */
     @media (max-width: 768px) {
       header h1 {
         font-size: 2rem;
@@ -167,9 +175,9 @@
   <p>Professional Virtual Assistant</p>
 </header>
 
-<section class="about">
+<section class="summary">
   <h2>About Me</h2>
-  <p>I’m a highly organized and tech-savvy Virtual Assistant with over 4 years of experience helping entrepreneurs and businesses manage their schedules, communication, and customer support. I specialize in administrative support, email management, and CRM tools.</p>
+  <p>Dedicated and results-driven Virtual Assistant with over 4 years of remote support experience  Skilled in managing administrative workflows, customer service, and CRM systems. Known for excellent communication, time management, and problem-solving abilities. Committed to helping businesses grow by taking care of operational tasks with efficiency and discretion.</p>
 </section>
 
 <section class="skills">
@@ -219,6 +227,33 @@
   University of Central Punjab, 2024</p>
 </section>
 
+<section class="testimonials">
+  <h2>Client Testimonials</h2>
+  <ul>
+    <li>
+      <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?crop=faces&fit=crop&w=60&h=60" alt="Sarah Thompson">
+      <div>
+        <em>"Zack is an outstanding virtual assistant. He’s responsive, dependable, and always ahead of schedule. Highly recommended!"</em>
+        <strong>– Sarah Thompson, Marketing Consultant</strong>
+      </div>
+    </li>
+    <li>
+      <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?crop=faces&fit=crop&w=60&h=60" alt="David Lee">
+      <div>
+        <em>"Thanks to Zack, I finally got my inbox under control. He’s organized, detail-oriented, and a pleasure to work with."</em>
+        <strong>– David Lee, Tech Startup Founder</strong>
+      </div>
+    </li>
+    <li>
+      <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?crop=faces&fit=crop&w=60&h=60" alt="Emily Chen">
+      <div>
+        <em>"Very reliable and great communicator. Zack has been instrumental in helping me scale my coaching business."</em>
+        <strong>– Emily Chen, Business Coach</strong>
+      </div>
+    </li>
+  </ul>
+</section>
+
 <section class="contact">
   <h2>Contact</h2>
   <p>Email: <a href="mailto:ZackVirtualServices@outlook.com">ZackVirtualServices@outlook.com</a><br>
@@ -232,6 +267,7 @@
 
 </body>
 </html>
+
 
 
 
