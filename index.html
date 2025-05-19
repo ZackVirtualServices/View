@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +17,8 @@
       background: #f0f0f0;
       color: #333;
       line-height: 1.6;
+      position: relative;
+      overflow-x: hidden; /* prevent horizontal scroll */
     }
     a {
       text-decoration: none;
@@ -26,6 +29,7 @@
       color: #fff;
       padding: 50px 0;
       text-align: center;
+      position: relative; /* for positioning toggle */
     }
     header img {
       width: 150px;
@@ -170,6 +174,67 @@
         font-size: 1rem;
       }
     }
+
+    /* Drawer styles */
+    #drawerToggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #1f2a38;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+      z-index: 1001;
+      transition: background 0.3s ease;
+    }
+    #drawerToggle:hover {
+      background: #16304e;
+    }
+
+    #drawer {
+      position: fixed;
+      top: 0;
+      right: -300px; /* hidden by default */
+      width: 300px;
+      height: 100vh;
+      background: #2e3b4e;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+      color: white;
+      padding: 20px;
+      transition: right 0.3s ease;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+    }
+    #drawer.open {
+      right: 0;
+    }
+    #drawer h3 {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #475a73;
+      padding-bottom: 10px;
+    }
+    #drawer a {
+      color: #a8b7d0;
+      margin: 10px 0;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    #drawer a:hover {
+      color: #fff;
+    }
+    #drawerClose {
+      align-self: flex-end;
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
@@ -178,14 +243,30 @@
   <img src="https://cdn-icons-png.flaticon.com/512/5955/5955412.png" alt="Virtual Assistant Logo" width="100" style="margin-bottom: 20px;"> 
   <h1>Zack Williams </h1>
   <p>Professional Virtual Assistant</p>
+
+  <!-- Drawer toggle button -->
+  <button id="drawerToggle" aria-label="Open Menu">&#9776;</button>
 </header>
 
-<section class="summary">
+<!-- Drawer panel -->
+<div id="drawer" role="navigation" aria-label="Main Menu">
+  <button id="drawerClose" aria-label="Close Menu">&times;</button>
+  <h3>Menu</h3>
+  <a href="#summary">About Me</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<section id="summary" class="summary">
   <h2>About me</h2>
   <p>Dedicated and results-driven Virtual Assistant with over 4 years of remote support experience. Skilled in managing administrative workflows, customer service, and CRM systems. Known for excellent communication, time management, and problem-solving abilities. Committed to helping businesses grow by taking care of operational tasks with efficiency and discretion.</p>
 </section>
 
-<section class="skills">
+<section id="skills" class="skills">
   <h2>Skills</h2>
   <ul>
     <li>Email & Calendar Management</li>
@@ -197,7 +278,7 @@
   </ul>
 </section>
 
-<section class="projects">
+<section id="projects" class="projects">
   <h2>Featured Projects</h2>
   <ul>
     <li>
@@ -211,7 +292,7 @@
   </ul>
 </section>
 
-<section class="experience">
+<section id="experience" class="experience">
   <h2>Work Experience</h2>
   <p><strong>Freelance Virtual Assistant</strong> – 2020–Present<br>
   Supporting multiple international clients with administrative, scheduling, and support tasks remotely.</p>
@@ -226,13 +307,13 @@
   - Handled customer inquiries and resolved issues related to services.</p>
 </section>
 
-<section class="education">
+<section id="education" class="education">
   <h2>Education</h2>
   <p><strong>BS. in Computer Science</strong><br>
   University of Central Punjab, 2024</p>
 </section>
 
-<section class="testimonials">
+<section id="testimonials" class="testimonials">
   <h2>Client Reviews</h2>
   <ul>
     <li>
@@ -259,7 +340,7 @@
   </ul>
 </section>
 
-<section class="contact">
+<section id="contact" class="contact">
   <h2>Contact</h2>
   <p>Email: <a href="mailto:ZackVirtualServices@outlook.com">ZackVirtualServices@outlook.com</a><br>
   LinkedIn: <a href="https://linkedin.com/in/ZackVirtualServices" target="_blank">linkedin.com/in/ZackVirtualServices</a><br>
@@ -269,6 +350,27 @@
 <footer>
   <p>&copy; 2025 Zack Williams | Virtual Assistant Portfolio</p>
 </footer>
+
+<script>
+  const drawerToggle = document.getElementById('drawerToggle');
+  const drawer = document.getElementById('drawer');
+  const drawerClose = document.getElementById('drawerClose');
+
+  drawerToggle.addEventListener('click', () => {
+    drawer.classList.add('open');
+  });
+
+  drawerClose.addEventListener('click', () => {
+    drawer.classList.remove('open');
+  });
+
+  // Optional: close drawer if clicked outside drawer area
+  document.addEventListener('click', (e) => {
+    if (!drawer.contains(e.target) && !drawerToggle.contains(e.target)) {
+      drawer.classList.remove('open');
+    }
+  });
+</script>
 
 </body>
 </html>
