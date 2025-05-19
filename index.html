@@ -374,6 +374,7 @@
     if (!drawer.contains(e.target) && !drawerToggle.contains(e.target)) {
       drawer.classList.remove('open');
       document.body.style.overflow = '';
+      drawerToggle.disabled=false;
     }
   });
 </script>
