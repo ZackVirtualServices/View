@@ -194,7 +194,7 @@
     #drawerToggle {
       position: fixed;
       top: 4px;
-      right: 20px;
+      right: 0;
       background: #1f2a38;
       border: none;
       color: white;
@@ -377,6 +377,7 @@
     drawer.classList.add('open');
     drawerToggle.disabled = true;
     document.body.style.overflow = 'hidden';
+    drawerToggle.classList.add('remove');
     
   });
 
@@ -384,6 +385,7 @@
     drawer.classList.remove('open');
     drawerToggle.disabled = false;
     document.body.style.overflow = '';
+    drawerToggle.classList.add('open');
     
   });
 
@@ -393,6 +395,7 @@
       drawer.classList.remove('open');
       document.body.style.overflow = '';
       drawerToggle.disabled=false;
+      drawerToggle.classList.add('open');
     }
   });
 </script>
