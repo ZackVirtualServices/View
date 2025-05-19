@@ -359,12 +359,14 @@
   drawerToggle.addEventListener('click', () => {
     drawer.classList.add('open');
     drawerToggle.disabled = true;
+    document.body.style.overflow = 'hidden';
     
   });
 
   drawerClose.addEventListener('click', () => {
     drawer.classList.remove('open');
     drawerToggle.disabled = false;
+    document.body.style.overflow = '';
   });
 
   // Optional: close drawer if clicked outside drawer area
