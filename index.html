@@ -358,10 +358,13 @@
 
   drawerToggle.addEventListener('click', () => {
     drawer.classList.add('open');
+    drawerToggle.disabled = true;
+    
   });
 
   drawerClose.addEventListener('click', () => {
     drawer.classList.remove('open');
+    drawerToggle.disabled = false;
   });
 
   // Optional: close drawer if clicked outside drawer area
