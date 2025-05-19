@@ -366,13 +366,14 @@
   drawerClose.addEventListener('click', () => {
     drawer.classList.remove('open');
     drawerToggle.disabled = false;
-    document.body.style.overflow = '';
+    
   });
 
   // Optional: close drawer if clicked outside drawer area
   document.addEventListener('click', (e) => {
     if (!drawer.contains(e.target) && !drawerToggle.contains(e.target)) {
       drawer.classList.remove('open');
+      document.body.style.overflow = '';
     }
   });
 </script>
