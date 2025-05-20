@@ -377,7 +377,7 @@
     drawer.classList.add('open');
     drawerToggle.disabled = true;
     document.body.style.overflow = 'hidden';
-    drawerToggle.classList.add('remove');
+    drawerToggle.hidden=true;
     
   });
 
@@ -385,7 +385,7 @@
     drawer.classList.remove('open');
     drawerToggle.disabled = false;
     document.body.style.overflow = '';
-    drawerToggle.classList.add('open');
+    drawerToggle.hidden=true;
     
   });
 
@@ -395,7 +395,7 @@
       drawer.classList.remove('open');
       document.body.style.overflow = '';
       drawerToggle.disabled=false;
-      drawerToggle.classList.add('open');
+      drawerToggle.hidden=true;
     }
   });
 </script>
